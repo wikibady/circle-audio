@@ -1,31 +1,44 @@
 #box{
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     position: relative;
     background: darkcyan;
+    overflow: hidden;
 }
 #left{
     position: absolute;
     left:0;
     width: 100%;
     height: 100%;
-    background-image: url("./left.png");
-    background-repeat:no-repeat;
-    transform: rotate(180deg);
+
+    transform: rotate(0deg);
     z-index: 9;
 
 }
 #right{
     position: absolute;
-    background-image: url("./left.png");
-    background-repeat:no-repeat;
+
     right:0;
     width: 100%;
     height: 100%;
-    transform: rotate(360deg);
+    transform: rotate(0deg);
     z-index: 11;
     display: none;
 
+}
+#left-bg {
+    background: url("./bg.png") no-repeat top left;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+#right-bg {
+    background: url("./bg.png") no-repeat top right;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
 }
 #left-cover{
     position: absolute;

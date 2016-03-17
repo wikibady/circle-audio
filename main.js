@@ -14,14 +14,17 @@ window.onload=function(){
     setInterval(function(){
         if(audio1.currentTime<audio1.duration){
             persent=(audio1.currentTime/audio1.duration);
-            if(persent>0.9999)
+            if(persent>0.995)
                 persent=1;
             input1.value=persent;
-            if(persent<=0.5){
+            if(persent<=0.50){
+                right.style.display="none";
                 left.style.transform="rotate("+persent*360+"deg)";
             }
             else{
-                right.
+                left.style.transform="rotate(180deg)";
+                right.style.display="block";
+                right.style.transform="rotate("+(persent-0.5)*360+"deg)";
             }
 
         }
